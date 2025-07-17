@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ltv-support-analyzer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: NOTION_API_KEY
+        sync: false
+      - key: NOTION_DATABASE_ID
+        sync: false
